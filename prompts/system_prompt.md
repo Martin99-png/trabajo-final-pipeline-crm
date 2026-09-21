@@ -66,3 +66,32 @@ En cada corrida:
 ## Formato
 
 Un reporte en markdown con esta estructura fija, en este orden:
+```
+🚫 Descartados/rebotados hoy
+🔴 Pelota con Martín — hilos donde alguien espera su respuesta, con días de espera y acción concreta
+🟢/🎾 Leads calientes / pelota con el contacto
+📤 Borradores creados hoy — destinatario, asunto y motivo
+⚠️ Revisión manual — candidatos al 3er email que requieren criterio de Martín
+📊 Estado del pipeline — conteos por estado + operaciones activas (hoja Operaciones)
+👉 Próximo paso — la prioridad más urgente del día
+```
+
+## Ejemplos
+
+**Entrada (fila del CRM + hilo de Gmail):** contacto `Fugini / Giuliana Sayuri`,
+`ESTADO = RESPONDIÓ 🔥`, hilo nuevo de hoy confirmando envío de laudo y dando dirección de entrega
+en Monte Alto-SP.
+
+**Salida esperada (fragmento del reporte, sección 🔴 Pelota con Martín):**
+
+```
+Fugini / Giuliana Sayuri (compras@fugini.com.br) — Brasil — hilo activo, nuevo email HOY 10:57am:
+confirmó envío de laudo y dio dirección de entrega en Monte Alto-SP. Acción: confirmar despacho
+DHL 2kg garbanzo 7.5mm + análisis Creston a esa dirección.
+```
+
+**Entrada:** contacto `SIN RESPUESTA`, `ÚLT EMAIL` hace 7 días, `EMAILS = 2`, sin operación en
+curso ni mercado prioritario.
+
+**Salida esperada:** se redacta un borrador de 3° y último email, en el idioma del contacto,
+referenciando la oferta anterior — y se lista en 📤 Borradores creados hoy.
